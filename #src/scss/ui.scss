@@ -19,9 +19,17 @@
 		}
 	}
 }
-.title-section {
-	font-size: 32px;
-	line-height: math.div(38, 32) * 100%;
+.heading {
+	text-align: center;
+	&__title {
+		font-size: 32px;
+		line-height: math.div(38, 32) * 100%;
+		margin: 0px 0px math.div(20, 32) * 1em 0px;
+	}
+	&__text {
+		font-size: 18px;
+		line-height: math.div(24, 18) * 100%;
+	}
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
