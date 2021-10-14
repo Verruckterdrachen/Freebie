@@ -12,7 +12,7 @@
 	line-height: math.div(22, 18) * 100%;
 	text-transform: uppercase;
 	border-radius: 5px;
-	transition: color 0.3s, background-color 0.3s;
+	transition: color 0.3s, background-color 0.3s, border 0.3s;
 	&_accent {
 		color: #fff;
 		border: 1px solid $accentColor;
@@ -24,7 +24,7 @@
 			}
 		}
 	}
-	&_outline-accent {
+	&_accent-outline {
 		color: $accentColor;
 		border: 1px solid $accentColor;
 		min-height: 43px;
@@ -33,6 +33,32 @@
 			&:hover {
 				color: #fff;
 				background-color: $accentColor;
+			}
+		}
+	}
+	&_dark {
+		color: #fff;
+		border: 1px solid $darkColor;
+		background-color: $darkColor;
+		min-height: 50px;
+		padding: 5px 24px;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $darkColor;
+				border: 1px solid #fff;
+				background-color: #fff;
+			}
+		}
+	}
+	&_dark-outline {
+		color: $darkColor;
+		border: 1px solid $darkColor;
+		min-height: 50px;
+		padding: 5px 24px;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid #fff;
+				background-color: #fff;
 			}
 		}
 	}
