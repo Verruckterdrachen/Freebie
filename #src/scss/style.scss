@@ -24,7 +24,7 @@ $fontSize: 16;
 
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
 $minWidth: 320px;
-$maxWidth: 1920;
+$maxWidth: 1440;
 $maxWidthContainer: 1170;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
@@ -32,6 +32,8 @@ $md3: 767.98;
 $md4: 479.98;
 
 $mainColor: #000;
+$darkColor: #231f20;
+$accentColor: #f7941e;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -61,16 +63,8 @@ body {
 ._container {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
-	@media (max-width: $md1 + px) {
-		max-width: 970px;
-	}
-	@media (max-width: $md2+px) {
-		max-width: 750px;
-	}
-	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 10px;
-	}
+	padding: 0px 15px;
+	box-sizing: content-box;
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
