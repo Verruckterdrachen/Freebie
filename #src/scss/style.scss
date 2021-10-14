@@ -86,7 +86,92 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+	&__hero {
+		margin: 116px 0px 0px 0px;
+		transition: margin 0.3s;
+		@media (max-width: $md2+px) {
+			margin: 80px 0px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 60px 0px 0px 0px;
+		}
+	}
 }
 //===================================================================================================================================
-
+.hero {
+	background-color: #f1f1f2;
+	&__container {
+		padding: 0;
+		@media (min-width: $md3+px) {
+			display: flex;
+		}
+	}
+	&__container-rev {
+		flex-direction: row-reverse;
+		.hero__text {
+			margin: 0px 0px math.div(40, 20) * 1em 0px;
+		}
+		@media (min-width: $md3+px) {
+			.hero__body {
+				@include adaptiv-value("padding-left", 90, 0, 1);
+				padding-right: 0;
+			}
+			.hero__image {
+				padding: 0px 0px 600/1170 * 100% 0px;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		min-width: 50%;
+		padding: 0px 25px;
+		@media (max-width: $md3+px) {
+			padding: 0px 15px;
+		}
+	}
+	&__body {
+		padding-top: 30px;
+		padding-bottom: 40px;
+		@media (min-width: $md3+px) {
+			@include adaptiv-value("padding-right", 60, 0, 1);
+		}
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		@include adaptiv-value("font-size", 56, 42, 1);
+		line-height: math.div(67, 56) * 100%;
+		margin: 0px 0px math.div(40, 56) * 1em 0px;
+		&-primary {
+			font-weight: normal;
+			font-size: 32px;
+			line-height: math.div(45, 32) * 100%;
+			margin: 0px 0px math.div(30, 32) * 1em 0px;
+		}
+	}
+	&__text {
+		font-size: 20px;
+		line-height: math.div(28, 20) * 100%;
+		@include adaptiv-value("margin-bottom", 55, 30, 1);
+	}
+	&__button {
+		min-height: 60px;
+		padding: 0px 46px;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: $md4+px) {
+			width: 100%;
+		}
+	}
+	&__image {
+		flex: 0 0 50%;
+		padding: 0px 0px 700/1170 * 100% 0px;
+		min-width: calc(50% + ((100vw - 1170px) / 2));
+		img {
+			max-width: 100%;
+		}
+	}
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================

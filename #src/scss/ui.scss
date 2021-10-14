@@ -4,16 +4,24 @@
 		@media (any-hover: hover) {
 			&:hover {
 				svg {
-					fill: $accentColor;
+					path {
+						fill: $accentColor;
+					}
 				}
 			}
 		}
 		svg {
-			fill: $darkColor;
-			transition: fill 0.3s;
+			path {
+				fill: $darkColor;
+				transition: fill 0.3s;
+			}
 			transform: translateY(15%);
 		}
 	}
+}
+.title-section {
+	font-size: 32px;
+	line-height: math.div(38, 32) * 100%;
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
