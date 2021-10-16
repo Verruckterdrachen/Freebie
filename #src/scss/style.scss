@@ -100,6 +100,8 @@ body {
 	}
 	&__call {
 	}
+	&__blog {
+	}
 }
 //===================================================================================================================================
 .hero {
@@ -312,6 +314,127 @@ body {
 			flex: 0 0 100%;
 			&:first-child {
 				margin: 0px 0px 16px 0px;
+			}
+		}
+	}
+}
+//====================================================================================================
+.blog {
+	@include adaptiv-value("padding-top", 90, 40, 1);
+	@include adaptiv-value("padding-bottom", 80, 50, 1);
+	&__heading {
+		@include adaptiv-value("margin-bottom", 70, 30, 1);
+	}
+	&__cards {
+		display: grid;
+		gap: 30px;
+		@media (min-width: $md3+px) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+.feature-blog {
+	margin: 0px -15px 40px -15px;
+	background-color: $darkColor;
+	@media (min-width: $md3+px) {
+		display: grid;
+		grid-template-columns: 400px 1fr;
+		margin: 0px 0px 40px 0px;
+	}
+	&__image {
+		padding: 0px 0px math.div(414.562, 767) * 100% 0px;
+		@media (min-width: $md3+px) {
+			padding: 0px 0px 370px 0px;
+		}
+	}
+	&__content {
+		@include adaptiv-value("padding-top", 62, 25, 1);
+		@include adaptiv-value("padding-right", 129, 15, 1);
+		@include adaptiv-value("padding-bottom", 50, 25, 1);
+		@include adaptiv-value("padding-left", 78, 15, 1);
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		justify-items: start;
+		color: #fff;
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__author {
+		font-size: 14px;
+		line-height: math.div(20, 14) * 100%;
+		@include adaptiv-value("margin-bottom", 27, 15, 1);
+	}
+	&__title {
+		@include adaptiv-value("font-size", 48, 32, 1);
+		line-height: math.div(58, 48) * 100%;
+		margin: 0px 0px math.div(35, 48) * 1em 0px;
+		@media (min-width: $md3+px) {
+			flex: 1 1 auto;
+		}
+	}
+	&__link {
+		color: inherit;
+		font-size: 18px;
+		line-height: math.div(25, 18) * 100%;
+		margin: 0px 0px math.div(20, 18) * 1em 0px;
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+}
+.card-blog {
+	display: grid;
+	justify-items: start;
+	@include adaptiv-value("padding", 48, 0, 1);
+	transition: box-shadow 0.3s;
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 10px 10px 15px 0px #0000000d;
+		}
+	}
+	@media (min-width: $md3+px) {
+		grid-template-rows: auto 1fr auto;
+		min-height: 290px;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: math.div(32, 24) * 100%;
+		margin: 0px 0px math.div(16, 24) * 1em 0px;
+	}
+	&__text {
+		font-size: 18px;
+		line-height: math.div(25, 18) * 100%;
+		margin: 0px 0px math.div(20, 18) * 1em 0px;
+	}
+	&__link {
+		color: inherit;
+		font-size: 14px;
+		line-height: math.div(20, 14) * 100%;
+		margin: 0px 0px math.div(20, 14) * 1em 0px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			width: 0;
+			height: 2px;
+			background-color: $mainColor;
+			transition: width 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					width: 100%;
+				}
 			}
 		}
 	}
